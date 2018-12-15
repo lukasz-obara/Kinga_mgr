@@ -1,0 +1,153 @@
+\documentclass[a4paper, 10pt,notitlepage]{report}
+%\documentclass[final,12pt]{newsiambookpl2}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage[]{graphicx}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{subfig}
+%\usepackage{hyperref}
+
+%\usepackage{spacefactor}
+%\usepackage{mathaccent}
+%\AtBeginEnvironment{longtable}{\singlespacing}
+%str tytułowa
+\usepackage[T1]{fontenc}
+%\usepackage[cp1250]{inputenc}
+\usepackage[top=2cm, bottom=2cm, left=3cm, right=3cm]{geometry}
+\makeatletter
+
+\newcommand{\linia}{\rule{\linewidth}{0.4mm}}
+
+\renewcommand{\maketitle}{\begin{titlepage}
+
+    \vspace*{1cm}
+
+   % \begin{center}\small
+
+    %%Uniwersytet Warszawski\\
+
+    %Wydział Fizyki\\
+
+    %Rozprawa                                                          Doktorska
+
+    %\end{center}
+	\begin{Large}
+%	\begin{table}[t]
+%	\centering
+%	\begin{tabular}[t]{lcr}
+%& &	\includegraphics[width=100pt,height=100pt]{pictures/godlo_UW.jpg} \\
+%& UNIWERSYTET WARSZAWSKI &\\
+%& WYDZIAŁ FIZYKI & 
+%\end{tabular}
+%	\end{table}		
+
+%\begin{center} \includegraphics[width=150pt,height=150pt]{pictures/godlo_UW.jpg} \end{center}
+\begin{center} WYŻSZA SZKOŁA ADMINISTRACJI, PRAWA I NAUK MEDYCZNYCH \end{center}
+\begin{center} WYDZIAŁ PRAWA \end{center}
+
+\begin{center}PRACA MAGISTERSKA\end{center}	
+		
+	\end{Large}
+
+    \vspace{3cm}
+
+    \noindent\linia
+
+    \begin{center}
+
+      \LARGE \textsc{\@title}
+
+         \end{center}
+
+     \noindent\linia
+
+    \vspace{0.5cm}
+
+    \begin{flushright}
+
+    \begin{minipage}{7cm}
+
+    \textit{\small Autor:}\\
+    KINGA ZUCHAŃSKA-OBARA
+    %\normalsize 
+    %\textsc{\@author} 
+    %\par
+
+    \end{minipage}
+
+    \vspace{3cm}
+
+     {\small Praca wykonana pod kierunkiem:}\\
+
+         ,,wpisz imie i nazwisko promotora ''
+         
+
+     \end{flushright}
+
+    \vspace*{\stretch{6}}
+
+    \begin{center}
+
+    \@date
+
+    \end{center}
+
+  \end{titlepage}%
+
+}
+
+\makeatother
+\author{Kinga Zuchańska-Obara}
+\linespread{1.5}
+%opening
+\title{,,Tu wpisz tytuł pracy magisterskiej.}
+%\author{Łukasz Obara}
+\date{}
+
+%nagłówkiem
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,LO]{\small\textit{\leftmark}}
+
+\fancyfoot[CE,CO]{\thepage} 
+ 
+\begin{document}
+
+\maketitle
+
+\newpage
+\begin{abstract}
+Tu będzie tekst streszczenia
+  
+ 
+\end{abstract}
+
+%tworzenie spisu treści
+\tableofcontents
+
+% tu dokładamy pliki z kolejnymi rozdziałami
+%wstęp
+\input{tekst/wstep.tex}
+
+%rozdziały
+\input{tekst/Rozdzial_1.tex}
+\input{tekst/Rozdzial_2.tex}
+
+%podsumowanie
+\input{tekst/podsumowanie.tex}
+
+%bibliografia
+\input{tekst/bibliografia.tex}
+
+\listoffigures
+
+
+\end{document}
